@@ -1,5 +1,12 @@
+import "./HomeDisplay.css"
+
 function HomeDisplay(){
-    return "Home"
+    return (
+        <div className="HomeDisplay">
+        "Home"
+
+        </div>
+        )
 }
 
 export default HomeDisplay

@@ -1,4 +1,17 @@
+.Nav{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Nav-site_title{
+    justify-content: center;
+    display: flex;
+    margin-left: 5vw;
+}
+
+
 a{
-    margin: auto 20px;
+    margin: 40px auto auto 20px;
     
 }

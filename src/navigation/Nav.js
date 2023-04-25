@@ -5,28 +5,32 @@ function Nav() {
 
     return (
         <nav className="Nav">
-            <h1 class="site-title">
-                <span class="creative">Michael |</span>
-                <span class="logical">Bocim</span>
-            </h1> 
-           <Link to={"/"}>
-                Home
-            </Link>
-           <Link to={"/about"}>
-                About
-            </Link>
-           <Link to={"/projects"}>
-                Projects
-            </Link>
-           <Link to={"/contact"}>
-                Contact
-            </Link>
-           {/* <Link to={"/blog"}>
+            <div class="Nav-site-title">
+                <h1>
+                    <span className="creative">Michael |</span>
+                    <span className="logical">Bocim</span>
+                </h1>
+            </div>
+            <div className="Nav-links">
+                <Link to={"/"}>
+                    Home
+                </Link>
+                <Link to={"/about"}>
+                    About
+                </Link>
+                <Link to={"/projects"}>
+                    Projects
+                </Link>
+                <Link to={"/contact"}>
+                    Contact
+                </Link>
+                {/* <Link to={"/blog"}>
                 Blog
             </Link> */}
-            {/* <Link to={"/other"}>
+                {/* <Link to={"/other"}>
                 Other
             </Link> */}
+            </div>
         </nav>
     )
 }
