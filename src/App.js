@@ -5,6 +5,10 @@ import siteApi from './api';
 import userContext from './userContext';
 import Nav from './navigation/Nav';
 import VisitorCounter from './VistorCounter';
+import ProjectDisplay from './projects/ProjectDisplay';
+import ContactDisplay from './contact/ContactDisplay';
+import HomeDisplay from './home/HomeDisplay';
+import AboutDisplay from './about/AboutDisplay';
 
 function App() {
   const [counterData, setCounterData] = useState({
@@ -26,23 +30,25 @@ function App() {
   return (
     <userContext.Provider value={''}>
       <div className="App">
+        <div className='App-Router'>
         <BrowserRouter>
           <Nav />
           <Routes>
-            <Route path='/' element={''} />
-            <Route path='/about' element={''} />
-            <Route path='/contact' element={''} />
-            <Route path='/projects' element={''} />
+            <Route path='/' element={<HomeDisplay/>} />
+            <Route path='/about' element={<AboutDisplay/>} />
+            <Route path='/contact' element={<ContactDisplay/>} />
+            <Route path='/projects' element={<ProjectDisplay/>} />
             {/* <Route path='/blog' element={''} /> */}
 
           </Routes>
         </BrowserRouter>
-        {counterData.fetched === false 
+        </div>
+        <footer>{counterData.fetched === false 
           ? 
             <p>Getting your fact...</p> 
           :
             <VisitorCounter fact={counterData.fact} count={counterData.value}/>
-        }
+        }</footer>
       </div>
     </userContext.Provider>
 

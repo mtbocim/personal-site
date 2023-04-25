@@ -5,6 +5,10 @@ function Nav() {
 
     return (
         <nav className="Nav">
+            <h1 class="site-title">
+                <span class="creative">Michael |</span>
+                <span class="logical">Bocim</span>
+            </h1> 
            <Link to={"/"}>
                 Home
             </Link>
@@ -19,6 +23,9 @@ function Nav() {
             </Link>
            {/* <Link to={"/blog"}>
                 Blog
+            </Link> */}
+            {/* <Link to={"/other"}>
+                Other
             </Link> */}
         </nav>
     )

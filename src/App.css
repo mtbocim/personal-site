@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+.logical{
+  font-family: 'Share Tech', sans-serif;
+  font-size: 48px;
+}
+
+.creative{
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  position: fixed;
+  background-color: gray;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  text-align: center;
+}
