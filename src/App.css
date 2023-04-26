@@ -68,3 +68,15 @@ body {
   text-align: center;
   height: 10vh;
 }
+
+@media only screen and (max-width:1080px) {
+  .logical{
+    font-family: 'Share Tech', sans-serif;
+    font-size: 4vh;
+  }
+  
+  .creative{
+    font-family: 'Great Vibes', cursive;
+    font-size: 4vh;
+  }
+}

@@ -16,7 +16,32 @@
 }
 
 
-a{
+.Nav a{
     margin: 40px auto auto 20px;
     
+}
+
+@media only screen and (max-width:1080px) {
+    .Nav{
+        height: 10vh;
+        flex-direction: column;
+    }
+    
+    .Nav-links{
+        margin:0vh;
+        justify-content: space-between;
+    }
+
+    .Nav-site-title{
+        justify-content:flex-start;
+        display: flex;
+        margin-left: 5vw;
+        height: 3vh;
+    }
+    
+    .Nav a{
+        margin: 2px;
+        width: 20vw;
+        font-size: 2vh;
+    }
 }
