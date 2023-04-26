@@ -1,0 +1,16 @@
+.CounterDisplay{
+    display: flex;
+    justify-content: center;
+}
+
+.CounterDisplay-digit{
+    border: 1px solid black;
+    margin: 0px;
+    padding: 1px;
+    width: 10px;
+    height: 20px;
+}
+
+.fact{
+    font-size: 20px;
+}

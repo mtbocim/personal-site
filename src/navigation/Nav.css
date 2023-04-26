@@ -29,6 +29,7 @@
     
     .Nav-links{
         margin:0vh;
+        display:flex;
         justify-content: space-between;
     }
 
