@@ -1,9 +1,12 @@
-/* .VisitorCounter{
-    height: 15vh;
-} */
+.VisitorCounter{
+    font-size: 2vh;
+}
 
 .VisitorCounter p{
     display: block;
-    font-size: 2vh;
     margin: 2px;
+}
+
+.VisitorCounter-fact{
+    font-size: 3vh;
 }
