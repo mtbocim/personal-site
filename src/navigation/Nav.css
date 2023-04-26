@@ -2,12 +2,17 @@
     background-color: cadetblue;
     display: flex;
     justify-content: space-between;
+    height: 10vh;
 }
 
-.Nav-site_title{
+.Nav-site-title{
     justify-content: center;
     display: flex;
     margin-left: 5vw;
+}
+
+.Nav-links{
+    margin: 2vh 2vw;
 }
 
 

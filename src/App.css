@@ -39,12 +39,12 @@
 
 .logical{
   font-family: 'Share Tech', sans-serif;
-  font-size: 48px;
+  font-size: 5vh;
 }
 
 .creative{
   font-family: 'Great Vibes', cursive;
-  font-size: 48px;
+  font-size: 5vh;
 }
 
 body {
@@ -59,13 +59,12 @@ body {
   flex-direction: column;
 }
 
-footer {
+.App footer {
   position: fixed;
   background-color: gray;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 10px;
   text-align: center;
   height: 10vh;
 }

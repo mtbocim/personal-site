@@ -95,4 +95,9 @@ function AboutDisplay() {
     )
 }
 
-export default AboutDisplay
+export default AboutDisplay;
+
+/*
+Things I could add to this page:
+Interactive technical skills with the icons
+ */

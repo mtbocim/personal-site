@@ -1,25 +1,31 @@
-.AboutDisplay{
-    margin-left: 20vw;
-    margin-right:20vw;
+.AboutDisplay {
+    margin-left: 10vw;
+    margin-right: 10vw;
+
 }
 
-.AboutDisplay p{
+.AboutDisplay p {
     display: block;
     width: 100vw;
-    font-size:5vw;
+    font-size: 5vw;
 }
+
 
 .AboutDisplay-skills {
     display: flex;
-    align-items:center;
-    flex-direction: center;
+    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     align-content: flex-start;
-    width: 60vw;
-    height: 60vh;
+    width: 80vw;
+    margin-bottom: 200px;
 }
-.dev-icons{
+
+.AboutDisplay-skills h6 {
+    font-size: 1.5vw;
+    margin-top: 0px;
+}
+.dev-icons {
     display: flex;
     flex-direction: column;
     align-items: center;
