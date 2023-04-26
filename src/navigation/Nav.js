@@ -5,7 +5,7 @@ function Nav() {
 
     return (
         <nav className="Nav">
-            <div class="Nav-site-title">
+            <div className="Nav-site-title">
                 <h1>
                     <span className="creative">Michael |</span>
                     <span className="logical">Bocim</span>
