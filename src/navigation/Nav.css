@@ -3,6 +3,8 @@
     display: flex;
     justify-content: space-between;
     height: 10vh;
+    margin: .5vh .5vh;
+    border: 5px solid black;
 }
 
 .Nav-site-title{

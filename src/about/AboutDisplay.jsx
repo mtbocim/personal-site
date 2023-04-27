@@ -26,6 +26,10 @@ function AboutDisplay() {
                     <h6>REACT</h6>
                 </div>
                 <div className="dev-icons">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
+                    <h6>DJANGO</h6>
+                </div>
+                <div className="dev-icons">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" />
                     <h6>JQUERY</h6>
                 </div>
@@ -56,6 +60,10 @@ function AboutDisplay() {
                 <div className="dev-icons">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg" />
                     <h6>SQLALCHEMY</h6>
+                </div>
+                <div className="dev-icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sequelize/sequelize-original.svg" />
+                    <h6>SEQUELIZE</h6>
                 </div>
                 <div className="dev-icons">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" />
