@@ -15,9 +15,9 @@
 }
 
 @media only screen and (max-width:1080px) {
-    .VisitorCounter{
+    /* .VisitorCounter{
         
-    }
+    } */
     
     .VisitorCounter-fact{
         visibility:hidden;

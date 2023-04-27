@@ -25,6 +25,7 @@
     font-size: 1.5vw;
     margin-top: 0px;
 }
+
 .dev-icons {
     display: flex;
     flex-direction: column;
@@ -33,4 +34,19 @@
     flex-basis: 10vw;
     row-gap: 2vw;
     padding: 5px;
+}
+
+@media only screen and (max-width:1080px) {
+    .dev-icons {
+        flex-basis: 12vh;
+    }
+
+    .AboutDisplay-skills h6 {
+        font-size: 3.5vw;
+    }
+
+    .dev-icons img{
+        width: 20vw;
+    }
+
 }
