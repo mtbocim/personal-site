@@ -57,6 +57,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: linear-gradient(rgba(67, 122, 67, 0.637), grey);
 }
 
 .App footer {
@@ -78,5 +79,8 @@ body {
   .creative{
     font-family: 'Great Vibes', cursive;
     font-size: 4vh;
+  }
+  .App footer{
+    display: flex;
   }
 }

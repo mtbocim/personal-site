@@ -1,4 +1,7 @@
 .VisitorCounter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 2vh;
 }
 
@@ -9,4 +12,15 @@
 
 .VisitorCounter-fact{
     font-size: 3vh;
+}
+
+@media only screen and (max-width:1080px) {
+    .VisitorCounter{
+        
+    }
+    
+    .VisitorCounter-fact{
+        visibility:hidden;
+        height:0vh;
+    }
 }
