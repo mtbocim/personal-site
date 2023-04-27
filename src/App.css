@@ -57,7 +57,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(rgba(67, 122, 67, 0.637), grey);
+  background-image:linear-gradient(rgb(131, 141, 128),white);
 }
 
 .App footer {

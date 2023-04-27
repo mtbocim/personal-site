@@ -3,8 +3,13 @@
     display: flex;
     justify-content: space-between;
     height: 10vh;
+<<<<<<< HEAD
     margin: 1vh;
     border: 2px solid black;
+=======
+    margin: .5vh .5vh;
+    border: 5px solid black;
+>>>>>>> 1065aa6c2fd9987487a07d3eed573201b70e154f
 }
 
 .Nav-site-title{
