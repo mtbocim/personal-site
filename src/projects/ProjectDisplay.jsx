@@ -8,6 +8,8 @@ function ProjectDisplay() {
                 <a 
                     href='https://chic-stardust-c1d1e8.netlify.app/'
                     className='logical'
+                    target="_blank" 
+                    rel="noopener noreferrer"
                 >
                     Jobly Demo
                     <img className="ProjectDisplay-project" src={require("../assets/Jobly-Screenshot.png")}></img>
@@ -17,6 +19,8 @@ function ProjectDisplay() {
                 <a 
                     href='https://michael-bocim-warbler.onrender.com'
                     className='logical'
+                    target="_blank" 
+                    rel="noopener noreferrer"
                 >
 
                     Warbler demo

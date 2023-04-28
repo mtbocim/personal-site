@@ -5,7 +5,7 @@
     height: 10vh;
     margin: 1.5vh 1.5vh;
     border: 5px solid black;
-    box-shadow: 0px 0px 15px 10px rgb(62, 70, 68);
+    box-shadow: 0px 0px 2vw 1.5vw rgb(62, 70, 68);
 
 }
 
@@ -36,6 +36,7 @@ a.active{
     
     .Nav-links-browser{
         visibility: hidden;
+        display: none;
     }
 
     .Nav-site-title{
@@ -47,7 +48,7 @@ a.active{
     
     .Nav a{
         margin: 2px;
-        font-size: 5vh;
+        font-size: 10vw;
         text-decoration: none;
     }
 }

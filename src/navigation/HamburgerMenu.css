@@ -23,11 +23,11 @@
     z-index: 1;
     visibility:hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 1s;
+    transition: visibility 0s, opacity .5s;
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: 45vw;
+    width: 200px;
   }
 /* 
   .HamburgerMenu.a{
@@ -53,10 +53,11 @@
   }
   
   .HamburgerMenu-menu.active{
-    visibility:visible;
+    visibility:hidden;
     opacity:1;
-    background-color: rgb(201, 184, 184);
+    background-color: rgba(201, 184, 184, 0.90);
     border: 2px solid black;
+    border-radius: 10%;
   }
 
   
@@ -64,9 +65,15 @@
     .HamburgerMenu{
       visibility: visible;
     }
+    .HamburgerMenu-menu.active{
+      visibility: visible;
+    }
     
+    .HamburgerMenu a{
+      font-size: 35px;
+    }
     a.active{
       font-weight: bold;
-      font-size: 6vh;
+      font-size: 42px;
     }
   }
