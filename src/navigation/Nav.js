@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './Nav.css'
 
 import HamburgerMenu from "./HamburgerMenu";
@@ -15,26 +15,26 @@ function Nav() {
                 </h1>
             </div>
             <div className="Nav-links">
-                <Link className="Nav-links-browser" to={"/"}>
+                <NavLink className="Nav-links-browser" to={"/"}>
                     Home
-                </Link>
-                <Link className="Nav-links-browser" to={"/about"}>
+                </NavLink>
+                <NavLink className="Nav-links-browser" to={"/about"}>
                     About
-                </Link>
-                <Link className="Nav-links-browser" to={"/projects"}>
+                </NavLink>
+                <NavLink className="Nav-links-browser" to={"/projects"}>
                     Projects
-                </Link>
-                <Link className="Nav-links-browser" to={"/contact"}>
+                </NavLink>
+                <NavLink className="Nav-links-browser" to={"/contact"}>
                     Contact
-                </Link>
-                <HamburgerMenu/>
+                </NavLink>
+                <HamburgerMenu className="Nav-HamburgerMenu"/>
 
-                {/* <Link to={"/blog"}>
+                {/* <NavLink to={"/blog"}>
                 Blog
-            </Link> */}
-                {/* <Link to={"/other"}>
+            </NavLink> */}
+                {/* <NavLink to={"/other"}>
                 Other
-            </Link> */}
+            </NavLink> */}
             </div>
         </nav>
     )

@@ -2,9 +2,10 @@
 
 .HamburgerMenu{
     position: absolute;
-    right: 5vw;
-    top: 4vh;
+    right: 7.5vw;
+    top: 5vh;
     display: inline-block;
+    visibility: hidden;
     /* margin: 20px; */
   }
   
@@ -26,7 +27,7 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: 30vw;
+    width: 45vw;
   }
 /* 
   .HamburgerMenu.a{
@@ -58,7 +59,14 @@
     border: 2px solid black;
   }
 
-  a.active{
-    font-weight: bold;
-    font-size: 5vw;
+  
+  @media only screen and (max-width:1080px) {
+    .HamburgerMenu{
+      visibility: visible;
+    }
+    
+    a.active{
+      font-weight: bold;
+      font-size: 6vh;
+    }
   }
