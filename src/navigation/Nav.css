@@ -43,6 +43,7 @@
     .Nav a{
         margin: 2px;
         width: 20vw;
-        font-size: 2vh;
+        font-size: 3vh;
+        text-decoration: none;
     }
 }
