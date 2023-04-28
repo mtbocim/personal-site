@@ -39,6 +39,7 @@
 @media only screen and (max-width:1080px) {
     .dev-icons {
         flex-basis: 12vh;
+        padding: 0px;
     }
 
     .AboutDisplay-skills h6 {
@@ -46,7 +47,7 @@
     }
 
     .dev-icons img{
-        width: 20vw;
+        width: 15vw;
     }
 
 }
