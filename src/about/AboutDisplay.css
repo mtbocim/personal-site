@@ -7,7 +7,10 @@
 .AboutDisplay p {
     display: block;
     width: 100vw;
-    font-size: 5vw;
+    font-size: 7.5vw;
+    font-weight: bold;
+    margin: 15px;
+    box-shadow: 0px 0px 2vw 1.5vw rgb(62, 70, 68);
 }
 
 
@@ -39,7 +42,7 @@
 @media only screen and (max-width:1080px) {
     .dev-icons {
         flex-basis: 12vh;
-        padding: 0px;
+        padding: 2vw;
     }
 
     .AboutDisplay-skills h6 {

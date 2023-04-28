@@ -9,7 +9,7 @@ function VisitorCounter({ count, fact }) {
         <div className="VisitorCounter logical">
             <CounterDisplay strValue={completeStrCount} />
             <div className='VisitorCounter-fact'>
-                <p className='creative'> {fact}</p>
+                <p> {fact}</p>
                 <p>(Visitor fact brought to you by NumbersAPI!)</p>
             </div>
         </div>

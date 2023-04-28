@@ -3,8 +3,8 @@ import './ContactDisplay.css'
 function ContactDisplay() {
     return (
 
-        <div className="ContactDisplay">
-                <p><strong>Phone: </strong>303.523.4361</p>
+        <div className="ContactDisplay logical">
+                <p><strong>Phone: </strong>(303)523-4361</p>
                 <p><strong>Email: </strong>mtbocim@gmail.com</p>
                     <a 
                         href="https://www.linkedin.com/in/michaelbocim" 

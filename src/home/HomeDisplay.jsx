@@ -1,12 +1,12 @@
 import "./HomeDisplay.css"
 
-function HomeDisplay(){
+function HomeDisplay() {
     return (
         <div className="HomeDisplay">
-        "Home"
+
 
         </div>
-        )
+    )
 }
 
 export default HomeDisplay
