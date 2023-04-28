@@ -29,10 +29,8 @@
         flex-direction: column;
     }
     
-    .Nav-links{
-        margin:0vh;
-        display:flex;
-        justify-content: space-between;
+    .Nav-links-browser{
+        visibility: hidden;
     }
 
     .Nav-site-title{

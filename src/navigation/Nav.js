@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { NavLink, Link } from "react-router-dom";
 import './Nav.css'
+
+import HamburgerMenu from "./HamburgerMenu";
 function Nav() {
 
     return (
@@ -13,18 +15,20 @@ function Nav() {
                 </h1>
             </div>
             <div className="Nav-links">
-                <Link to={"/"}>
+                <Link className="Nav-links-browser" to={"/"}>
                     Home
                 </Link>
-                <Link to={"/about"}>
+                <Link className="Nav-links-browser" to={"/about"}>
                     About
                 </Link>
-                <Link to={"/projects"}>
+                <Link className="Nav-links-browser" to={"/projects"}>
                     Projects
                 </Link>
-                <Link to={"/contact"}>
+                <Link className="Nav-links-browser" to={"/contact"}>
                     Contact
                 </Link>
+                <HamburgerMenu/>
+
                 {/* <Link to={"/blog"}>
                 Blog
             </Link> */}
