@@ -82,5 +82,6 @@ body {
   }
   .App footer{
     display: flex;
+    justify-content: center;
   }
 }

@@ -8,5 +8,11 @@
     margin: 0px;
     padding: 1px;
     width: 10px;
-    height: 20px;
+    height: 2vh;
+}
+
+@media only screen and (max-width:1080px) {
+    .CounterDisplay-digit{
+        width: 2.5vw;
+    }
 }
