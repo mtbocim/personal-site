@@ -1,10 +1,10 @@
-.TechnicalDisplay {
+.AboutDisplay {
     margin-left: 10vw;
     margin-right: 10vw;
 
 }
 
-.TechnicalDisplay p {
+.AboutDisplay p {
     display: block;
     width: 100vw;
     font-size: 7.5vw;
@@ -14,7 +14,7 @@
 }
 
 
-.TechnicalDisplay-skills {
+.AboutDisplay-skills {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@
     margin-bottom: 200px;
 }
 
-.TechnicalDisplay-skills h6 {
+.AboutDisplay-skills h6 {
     font-size: 1.5vw;
     margin-top: 0px;
 }
@@ -45,7 +45,7 @@
         padding: 2vw;
     }
 
-    .TechnicalDisplay-skills h6 {
+    .AboutDisplay-skills h6 {
         font-size: 3.5vw;
     }
 

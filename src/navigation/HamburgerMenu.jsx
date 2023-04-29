@@ -22,6 +22,12 @@ function HamburgerMenu() {
                     <NavLink to={"/about"}>
                         About
                     </NavLink>
+                    <NavLink to={"/blog"}>
+                        Blog
+                    </NavLink>
+                    <NavLink to={"/technical"}>
+                        Technical
+                    </NavLink>
                     <NavLink to={"/projects"} >
                         Projects
                     </NavLink>

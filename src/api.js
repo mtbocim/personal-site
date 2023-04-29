@@ -13,6 +13,29 @@ class siteApi {
         })
         return res;
     }
+
+    static async login(username, password){
+        try{
+        const res = await axios({
+            method:"post",
+            url:`${BASE_URL}/auth/token`,
+            data: {username,password}
+        })
+        console.log("what is login res", res);
+        return res;
+        }catch(e){
+            console.log(e)
+        }
+    }
+
+    static async getAllBlogs(){
+        const res = await axios({
+            method:"get",
+            url:`${BASE_URL}/blog`,
+        })
+        console.log("what is login res", res);
+        return res;
+    }
 }
 
 export default siteApi;

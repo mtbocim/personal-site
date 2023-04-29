@@ -21,6 +21,12 @@ function Nav() {
                 <NavLink className="Nav-links-browser" to={"/about"}>
                     About
                 </NavLink>
+                <NavLink className="Nav-links-browser" to={"/blog"}>
+                    Blog
+                </NavLink>
+                <NavLink className="Nav-links-browser" to={"/technical"}>
+                    Technical
+                </NavLink>
                 <NavLink className="Nav-links-browser" to={"/projects"}>
                     Projects
                 </NavLink>
@@ -29,9 +35,6 @@ function Nav() {
                 </NavLink>
                 <HamburgerMenu className="Nav-HamburgerMenu"/>
 
-                {/* <NavLink to={"/blog"}>
-                Blog
-            </NavLink> */}
                 {/* <NavLink to={"/other"}>
                 Other
             </NavLink> */}

@@ -9,6 +9,8 @@ import ProjectDisplay from './projects/ProjectDisplay';
 import ContactDisplay from './contact/ContactDisplay';
 import HomeDisplay from './home/HomeDisplay';
 import AboutDisplay from './about/AboutDisplay';
+import TechnicalDisplay from './technical/TechnicalDisplay';
+import BlogDisplay from './blog/BlogDisplay';
 
 function App() {
   const [counterData, setCounterData] = useState({
@@ -36,9 +38,10 @@ function App() {
           <Routes>
             <Route path='/' element={<HomeDisplay/>} />
             <Route path='/about' element={<AboutDisplay/>} />
-            <Route path='/contact' element={<ContactDisplay/>} />
+            <Route path='/blog' element={<BlogDisplay/>} />
             <Route path='/projects' element={<ProjectDisplay/>} />
-            {/* <Route path='/blog' element={''} /> */}
+            <Route path='/technical' element={<TechnicalDisplay/>} />
+            <Route path='/contact' element={<ContactDisplay/>} />
 
           </Routes>
         </BrowserRouter>
