@@ -11,6 +11,7 @@ import HomeDisplay from './home/HomeDisplay';
 import AboutDisplay from './about/AboutDisplay';
 import TechnicalDisplay from './technical/TechnicalDisplay';
 import BlogDisplay from './blog/BlogDisplay';
+import Admin from './Admin';
 
 function App() {
   const [counterData, setCounterData] = useState({
@@ -18,6 +19,8 @@ function App() {
     value: -1,
     fact: ''
   });
+  const [token, setToken] = useState(localStorage.getItem("token"));
+  console.log("what is token", token)
   console.log("what is counterData", counterData);
   useEffect(function getCounterData() {
     async function fetchCounterData() {
@@ -29,28 +32,36 @@ function App() {
     fetchCounterData();
   }, []);
 
+  async function handleLogin(formData) {
+    const result = await siteApi.login(formData);
+    localStorage.setItem("token", result.token);
+    setToken(() => result.token);
+  }
+
   return (
     <userContext.Provider value={''}>
       <div className="App">
         <div className='App-Router'>
-        <BrowserRouter>
-          <Nav />
-          <Routes>
-            <Route path='/' element={<HomeDisplay/>} />
-            <Route path='/about' element={<AboutDisplay/>} />
-            <Route path='/blog' element={<BlogDisplay/>} />
-            <Route path='/projects' element={<ProjectDisplay/>} />
-            <Route path='/technical' element={<TechnicalDisplay/>} />
-            <Route path='/contact' element={<ContactDisplay/>} />
+          <BrowserRouter>
+            <Nav />
+            <Routes>
+              <Route path='/' element={<HomeDisplay />} />
+              <Route path='/about' element={<AboutDisplay />} />
+              <Route path='/blog' element={<BlogDisplay />} />
+              <Route path='/projects' element={<ProjectDisplay />} />
+              <Route path='/technical' element={<TechnicalDisplay />} />
+              <Route path='/contact' element={<ContactDisplay />} />
+              <Route path='/admin' element={<Admin handleLogin={handleLogin} />} />
+              <Route path="*" element={<Navigate to="/" />} />
 
-          </Routes>
-        </BrowserRouter>
+            </Routes>
+          </BrowserRouter>
         </div>
-        <footer>{counterData.fetched === false 
-          ? 
-            <p>Getting your fact...</p> 
+        <footer>{counterData.fetched === false
+          ?
+          <p>Getting your fact...</p>
           :
-            <VisitorCounter fact={counterData.fact} count={counterData.value}/>
+          <VisitorCounter fact={counterData.fact} count={counterData.value} />
         }</footer>
       </div>
     </userContext.Provider>

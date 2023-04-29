@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react"
-import siteApi from "../api"
+import { useState, useEffect } from "react";
+import siteApi from "../api";
+import BlogPost from "./BlogPost";
 
 function BlogDisplay(){
     const [ blogs, setBlogs] = useState()
     const [ loaded, setLoaded ] = useState(false)
+    
     console.log("what is blogs", blogs)
+    
     useEffect(function getBlogsOnMount(){
         async function getBlogs(){
             const results = await siteApi.getAllBlogs();
@@ -13,6 +16,8 @@ function BlogDisplay(){
         }
         getBlogs();
     }, []);
+
+
     function parseDateStamp(timestamp){
         const date = new Date(Date.parse(timestamp));
         const day = date.toLocaleString('default', { day: 'numeric' });
@@ -23,6 +28,7 @@ function BlogDisplay(){
 
     return (
         <div className="BlogDisplay">
+            <BlogPost/>
             {!loaded ? <p>Loading</p> : blogs.map((blog)=>
                 <div className="BlogDisplay-blog" key={blog.id}>
                     <p>{parseDateStamp(blog.date_written)} - {blog.title}</p>

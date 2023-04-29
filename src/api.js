@@ -5,33 +5,43 @@ import axios from "axios";
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3001";
 
 class siteApi {
+
+    static token = localStorage.getItem("token");
+
     static async counter() {
         let res = await axios({
-            method:"post",
-            url:`${BASE_URL}/counter`,
-            withCredentials:true
+            method: "post",
+            url: `${BASE_URL}/counter`,
+            withCredentials: true
         })
         return res;
     }
 
-    static async login(username, password){
-        try{
-        const res = await axios({
-            method:"post",
-            url:`${BASE_URL}/auth/token`,
-            data: {username,password}
-        })
-        console.log("what is login res", res);
-        return res;
-        }catch(e){
-            console.log(e)
+    static async login(formData) {
+        try {
+            const res = await axios({
+                method: "post",
+                url: `${BASE_URL}/auth/token`,
+                data: formData
+            })
+            console.log("what is login res", res);
+            return res.data;
+        } catch (err) {
+            console.error("API Error:", err.response);
+            if (err.response.data?.error === undefined) {
+                err.response.data = { error: { message: "Unable to connect to server" } }
+
+            }
+            console.log("updated", err.response)
+            let message = err.response.data.error.message;
+            throw Array.isArray(message) ? message : [message];
         }
     }
 
-    static async getAllBlogs(){
+    static async getAllBlogs() {
         const res = await axios({
-            method:"get",
-            url:`${BASE_URL}/blog`,
+            method: "get",
+            url: `${BASE_URL}/blog`,
         })
         console.log("what is login res", res);
         return res;
@@ -39,3 +49,5 @@ class siteApi {
 }
 
 export default siteApi;
+
+// const headers = { Authorization: `Bearer ${JoblyApi.token}` };
