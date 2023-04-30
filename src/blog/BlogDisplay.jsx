@@ -33,7 +33,7 @@ function BlogDisplay({ token }) {
             {isAdmin && <BlogPost token={token} setLoaded={setLoaded} />}
             {
                 !loaded
-                    ? <p>Loading</p>
+                    ? <p>Loading...</p>
                     : blogs.map((blog) => <Blog key={blog.id} blog={blog} />)
             }
         </div>

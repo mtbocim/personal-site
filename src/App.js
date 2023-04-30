@@ -59,7 +59,7 @@ function App() {
         </div>
         <footer>{counterData.fetched === false
           ?
-          <p>Getting your fact...</p>
+          <p>Loading...</p>
           :
           <VisitorCounter fact={counterData.fact} count={counterData.value} />
         }</footer>
