@@ -13,11 +13,12 @@ function Blog({ blog }) {
     return (
         <div className="Blog">
             <div className='Blog-title'>
-                <p className="">{parseDateStamp(blog.date_written)}</p>
-                <p className=""> {blog.title}</p>
+                <p className=""><b>{parseDateStamp(blog.date_written)}</b> | <em>{blog.title}</em> </p>
             </div>
+            <div className='Blog-content-container'>
             <div className='Blog-content'>
                 {parse(blog.content)}
+            </div>
             </div>
         </div>
     )

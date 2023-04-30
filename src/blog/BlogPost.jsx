@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import siteApi from "../api";
 import AlertMsg from "../AlertMsg";
 import { CKEditor } from '@ckeditor/ckeditor5-react';
@@ -16,11 +15,8 @@ function BlogPost({ token, setLoaded }) {
 
     const [errors, setErrors] = useState([]);
 
-    // const [editorContent, setEditorContent] = useState('')
-
     function handleContentChange(data) {
         setFormData((prevData) => ({ ...prevData, content: data }));
-        // setEditorContent(()=>data)
     }
 
     function handleChange(evt) {
@@ -41,7 +37,6 @@ function BlogPost({ token, setLoaded }) {
                 tags: {},
             }))
             setLoaded(() => false)
-            // setEditorContent(()=>'')
             setErrors(()=>[])
             console.log("success, result is", result);
         }

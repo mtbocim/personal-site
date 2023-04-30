@@ -9,8 +9,9 @@
     flex-wrap: wrap; 
 }
 .Blog-title{
-    background-color:azure;
-    width: 25vw;
+    background-color:rgb(188, 151, 196);
+    padding: 5px;
+    width:fit-content;
     display:flex;
     margin-left: 5vw;
     margin-bottom:5vh;
@@ -21,21 +22,28 @@
     box-shadow: 2px 2px 20px 2px black;
 }
 
-.Blog-content{
+.Blog-content-container{
     border: 1px solid black;
+    border-radius: 10px;
+    background-color: bisque;
     width:88vw;
     margin-left: 5vw;
     margin-bottom: 2vh;
+}
+.Blog-content{
+    margin-left: 1vw;
+    margin-right:1vw;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     flex-wrap: wrap; 
     padding: 1vw;
+    align-items: flex-start;
 }
 
 @media only screen and (max-width:1080px) {
     .Blog-title{
-        width: 35vw;
         margin-bottom: 1vh;
+        max-width: 87vw;
     }
 }
