@@ -4,6 +4,8 @@ import BlogPost from "./BlogPost";
 import Blog from "./Blog";
 import jwt_decode from "jwt-decode";
 
+import './BlogDisplay.css'
+
 function BlogDisplay({ token }) {
     const [blogs, setBlogs] = useState()
     const [loaded, setLoaded] = useState(false)

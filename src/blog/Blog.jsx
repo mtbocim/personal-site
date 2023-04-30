@@ -1,8 +1,8 @@
 import parse from 'html-react-parser';
-
+import "./Blog.css"
 function Blog({ blog }) {
-    
-    function parseDateStamp(timestamp){
+
+    function parseDateStamp(timestamp) {
         const date = new Date(Date.parse(timestamp));
         const day = date.toLocaleString('default', { day: 'numeric' });
         const month = date.toLocaleString('default', { month: 'long' });
@@ -11,10 +11,13 @@ function Blog({ blog }) {
     }
 
     return (
-        <div className="Blog" key={blog.id}>
-            <p>{parseDateStamp(blog.date_written)} - {blog.title}</p>
-            {parse(blog.content)}
-            <p></p>
+        <div className="Blog">
+            <div className='Blog-title'>
+                <p>{parseDateStamp(blog.date_written)} - {blog.title}</p>
+            </div>
+            <div className='Blog-content'>
+                {parse(blog.content)}
+            </div>
         </div>
     )
 }
