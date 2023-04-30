@@ -1,3 +1,41 @@
+.Blog p{
+    margin:0px;
+}
+
 .Blog{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap; 
+}
+.Blog-title{
+    background-color:azure;
+    width: 25vw;
+    display:flex;
+    margin-left: 5vw;
+    margin-bottom:5vh;
+    flex-direction: column;
+    margin-bottom: 5px;
+    align-content:center;
+    flex-wrap: wrap;
+    box-shadow: 2px 2px 20px 2px black;
+}
+
+.Blog-content{
     border: 1px solid black;
+    width:88vw;
+    margin-left: 5vw;
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    flex-wrap: wrap; 
+    padding: 1vw;
+}
+
+@media only screen and (max-width:1080px) {
+    .Blog-title{
+        width: 35vw;
+        margin-bottom: 1vh;
+    }
 }

@@ -25,12 +25,12 @@ function BlogDisplay({ token }) {
             setLoaded(() => true)
         }
         getBlogs();
-    }, []);
+    }, [loaded]);
 
 
     return (
         <div className="BlogDisplay">
-            {isAdmin && <BlogPost token={token} />}
+            {isAdmin && <BlogPost token={token} setLoaded={setLoaded} />}
             {
                 !loaded
                     ? <p>Loading</p>

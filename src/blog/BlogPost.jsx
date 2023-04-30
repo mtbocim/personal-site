@@ -6,22 +6,21 @@ import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 
-function BlogPost({token}) {
-    
+function BlogPost({ token, setLoaded }) {
+
     const [formData, setFormData] = useState({
         title: '',
         content: '',
         tags: {},
     });
 
-    console.log("what is form data", formData)
     const [errors, setErrors] = useState([]);
-    console.log("what are errors", errors)
-    const navigate = useNavigate();
+
+    // const [editorContent, setEditorContent] = useState('')
 
     function handleContentChange(data) {
-        // console.log("blog post handle change", evt)
-        setFormData((prevData) => ({ ...prevData, content: data }))
+        setFormData((prevData) => ({ ...prevData, content: data }));
+        // setEditorContent(()=>data)
     }
 
     function handleChange(evt) {
@@ -36,7 +35,14 @@ function BlogPost({token}) {
         evt.preventDefault();
         try {
             const result = await siteApi.postBlog(formData, token);
-            navigate('/blog');
+            setFormData(() => ({
+                title: '',
+                content: '',
+                tags: {},
+            }))
+            setLoaded(() => false)
+            // setEditorContent(()=>'')
+            setErrors(()=>[])
             console.log("success, result is", result);
         }
         catch (errorMessages) {
@@ -48,7 +54,7 @@ function BlogPost({token}) {
     return (
         <div className="BlogPost">
             <form
-                className="BlogPost-form" 
+                className="BlogPost-form"
                 onSubmit={handleSubmit}
             >
                 <label>
@@ -62,7 +68,7 @@ function BlogPost({token}) {
                 </label>
                 <CKEditor
                     editor={ClassicEditor}
-                    data=""
+                    data={formData.content}
                     onReady={editor => {
                         // You can store the "editor" and use when it is needed.
                         console.log('Editor is ready to use!', editor);
@@ -77,9 +83,9 @@ function BlogPost({token}) {
                         const data = editor.getData();
                         handleContentChange(data)
                     }}
-                    />
-                    <AlertMsg msgs={errors} />
-                    <button>Post</button>
+                />
+                <AlertMsg msgs={errors} />
+                <button>Post</button>
             </form>
         </div>
     )
