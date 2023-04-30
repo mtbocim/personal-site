@@ -9,11 +9,10 @@ import './BlogDisplay.css'
 function BlogDisplay({ token }) {
     const [blogs, setBlogs] = useState()
     const [loaded, setLoaded] = useState(false)
-    const [isAdmin, setIsAdmin] = useState(
-        token !== null
+    const isAdmin = token !== null
             ? jwt_decode(token).isAdmin
             : false
-    );
+
 
     console.log("what is blogs", blogs)
     console.log("what is admin", isAdmin)

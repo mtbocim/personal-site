@@ -12,7 +12,11 @@ function ProjectDisplay() {
                     rel="noopener noreferrer"
                 >
                     Jobly Demo
-                    <img className="ProjectDisplay-project" src={require("../assets/Jobly-Screenshot.png")}></img>
+                    <img 
+                        className="ProjectDisplay-project" 
+                        src={require("../assets/Jobly-Screenshot.png")}
+                        alt='Jobly demo'
+                    ></img>
                 </a>
             </div>
             <div className='ProjectDisplay-project'>
@@ -24,7 +28,11 @@ function ProjectDisplay() {
                 >
 
                     Warbler demo
-                    <img className="ProjectDisplay-project" src={require("../assets/Warbler-Screenshot.png")}></img>
+                    <img 
+                        className="ProjectDisplay-project" 
+                        src={require("../assets/Warbler-Screenshot.png")}
+                        alt='Warbler demo'
+                    ></img>
                 </a>
             </div>
         </div>
