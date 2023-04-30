@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import siteApi from "./api";
 import AlertMsg from "./AlertMsg";
 
 function Admin({handleLogin}){

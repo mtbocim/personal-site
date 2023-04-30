@@ -1,41 +1,39 @@
 import { useState, useEffect } from "react";
 import siteApi from "../api";
 import BlogPost from "./BlogPost";
+import Blog from "./Blog";
+import jwt_decode from "jwt-decode";
 
-function BlogDisplay(){
-    const [ blogs, setBlogs] = useState()
-    const [ loaded, setLoaded ] = useState(false)
-    
+function BlogDisplay({ token }) {
+    const [blogs, setBlogs] = useState()
+    const [loaded, setLoaded] = useState(false)
+    const [isAdmin, setIsAdmin] = useState(
+        token !== null
+            ? jwt_decode(token).isAdmin
+            : false
+    );
+
     console.log("what is blogs", blogs)
-    
-    useEffect(function getBlogsOnMount(){
-        async function getBlogs(){
+    console.log("what is admin", isAdmin)
+
+    useEffect(function getBlogsOnMount() {
+        async function getBlogs() {
             const results = await siteApi.getAllBlogs();
-            setBlogs(()=>results.data.blogs)
-            setLoaded(()=>true)
+            setBlogs(() => results.data.blogs)
+            setLoaded(() => true)
         }
         getBlogs();
     }, []);
 
 
-    function parseDateStamp(timestamp){
-        const date = new Date(Date.parse(timestamp));
-        const day = date.toLocaleString('default', { day: 'numeric' });
-        const month = date.toLocaleString('default', { month: 'long' });
-        const year = date.getFullYear();
-        return `${month} ${day}, ${year}`;
-    }
-
     return (
         <div className="BlogDisplay">
-            <BlogPost/>
-            {!loaded ? <p>Loading</p> : blogs.map((blog)=>
-                <div className="BlogDisplay-blog" key={blog.id}>
-                    <p>{parseDateStamp(blog.date_written)} - {blog.title}</p>
-                    <p>{blog.content}</p>
-                    <p></p>
-                </div>
-            )}
+            {isAdmin && <BlogPost token={token} />}
+            {
+                !loaded
+                    ? <p>Loading</p>
+                    : blogs.map((blog) => <Blog key={blog.id} blog={blog} />)
+            }
         </div>
     )
 }

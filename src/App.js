@@ -47,7 +47,7 @@ function App() {
             <Routes>
               <Route path='/' element={<HomeDisplay />} />
               <Route path='/about' element={<AboutDisplay />} />
-              <Route path='/blog' element={<BlogDisplay />} />
+              <Route path='/blog' element={<BlogDisplay token={token}/>} />
               <Route path='/projects' element={<ProjectDisplay />} />
               <Route path='/technical' element={<TechnicalDisplay />} />
               <Route path='/contact' element={<ContactDisplay />} />

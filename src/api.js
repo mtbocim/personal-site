@@ -46,6 +46,29 @@ class siteApi {
         console.log("what is login res", res);
         return res;
     }
+
+    static async postBlog(formData, token) {
+        const headers = { Authorization: `Bearer ${token}` };
+        try {
+            const result = await axios({
+                method: 'post',
+                url: `${BASE_URL}/blog`,
+                headers: headers,
+                data: formData,
+            })
+            return result;
+        } catch (err) {
+            console.error("API Error:", err.response);
+            if (err.response.data?.error === undefined) {
+                err.response.data = { error: { message: "Unable to connect to server" } }
+
+            }
+            console.log("updated", err.response)
+            let message = err.response.data.error.message;
+            throw Array.isArray(message) ? message : [message];
+        }
+
+    }
 }
 
 export default siteApi;
