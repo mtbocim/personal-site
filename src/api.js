@@ -12,7 +12,7 @@ class siteApi {
         let res = await axios({
             method: "post",
             url: `${BASE_URL}/counter`,
-            withCredentials: true
+            // withCredentials: true
         })
         return res;
     }
