@@ -73,7 +73,7 @@
     .HamburgerMenu-menu.active{
       visibility: visible;
       top: 10vh;
-      right: 8vw;
+      right: 5.5vw;
     }
     
     a.active{
@@ -83,25 +83,25 @@
       color:black;
     }
     .HamburgerMenu-menu a{
-      font-size: 3vh;
+      font-size: 5vw;
     }
 
     .HamburgerMenu-menu{
-      width: 50vw;
+      width: 35vw;
     }
   }
 
   @media only screen and (max-width:1080px)and (min-aspect-ratio: 1/1) {
     .HamburgerMenu-menu.active{
       visibility: visible;
-      top: 8vw;
-      right: 5.5vw;
+      top: 10vw;
+      right: 5.5vh;
       
     }
     .HamburgerMenu-menu a{
-      font-size: 3vw;
+      font-size: 5vh;
     }
     .HamburgerMenu-menu{
-      width: 50vh;
+      width: 35vh;
     }
   }
