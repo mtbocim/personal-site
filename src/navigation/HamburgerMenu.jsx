@@ -6,7 +6,7 @@ function HamburgerMenu() {
     const [isActive, setIsActive] = useState(false);
 
     function toggleClick() {
-        console.log("hello")
+        // console.log("hello")
         setIsActive(() => !isActive)
     }
 

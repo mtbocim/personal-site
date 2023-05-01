@@ -20,8 +20,8 @@ function App() {
     fact: ''
   });
   const [token, setToken] = useState(localStorage.getItem("token"));
-  console.log("what is token", token)
-  console.log("what is counterData", counterData);
+  // console.log("what is token", token)
+  // console.log("what is counterData", counterData);
   useEffect(function getCounterData() {
     async function fetchCounterData() {
       const results = await siteApi.counter();

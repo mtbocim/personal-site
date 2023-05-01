@@ -30,10 +30,10 @@ function Admin({handleLogin}){
         try {
             const result = await handleLogin(formData);
             navigate('/');
-            console.log("success, result is", result);
+            // console.log("success, result is", result);
         }
         catch (errorMessages) {
-            console.log("err>>>>>>>>>>>>", errorMessages);
+            // console.log("err>>>>>>>>>>>>", errorMessages);
             setErrors(() => errorMessages);
         }
     }

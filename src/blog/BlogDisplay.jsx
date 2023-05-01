@@ -14,8 +14,8 @@ function BlogDisplay({ token }) {
             : false
 
 
-    console.log("what is blogs", blogs)
-    console.log("what is admin", isAdmin)
+    // console.log("what is blogs", blogs)
+    // console.log("what is admin", isAdmin)
 
     useEffect(function getBlogsOnMount() {
         async function getBlogs() {

@@ -24,7 +24,7 @@ class siteApi {
                 url: `${BASE_URL}/auth/token`,
                 data: formData
             })
-            console.log("what is login res", res);
+            // console.log("what is login res", res);
             return res.data;
         } catch (err) {
             console.error("API Error:", err.response);
@@ -32,7 +32,7 @@ class siteApi {
                 err.response.data = { error: { message: "Unable to connect to server" } }
 
             }
-            console.log("updated", err.response)
+            // console.log("updated", err.response)
             let message = err.response.data.error.message;
             throw Array.isArray(message) ? message : [message];
         }
@@ -43,7 +43,7 @@ class siteApi {
             method: "get",
             url: `${BASE_URL}/blog`,
         })
-        console.log("what is login res", res);
+        // console.log("what is login res", res);
         return res;
     }
 
@@ -63,7 +63,7 @@ class siteApi {
                 err.response.data = { error: { message: "Unable to connect to server" } }
 
             }
-            console.log("updated", err.response)
+            // console.log("updated", err.response)
             let message = err.response.data.error.message;
             throw Array.isArray(message) ? message : [message];
         }
