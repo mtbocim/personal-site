@@ -1,4 +1,4 @@
-import './AboutDisplay.css'
+// import './AboutDisplay.css'
 
 function AboutDisplay() {
     return (

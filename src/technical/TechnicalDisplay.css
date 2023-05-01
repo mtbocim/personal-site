@@ -1,10 +1,10 @@
-.AboutDisplay {
+.TechnicalDisplay {
     margin-left: 10vw;
     margin-right: 10vw;
 
 }
 
-.AboutDisplay p {
+.TechnicalDisplay p {
     display: block;
     width: 100vw;
     font-size: 7.5vw;
@@ -14,7 +14,7 @@
 }
 
 
-.AboutDisplay-skills {
+.TechnicalDisplay-skills {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,7 +24,7 @@
     margin-bottom: 200px;
 }
 
-.AboutDisplay-skills h6 {
+.TechnicalDisplay-skills h6 {
     font-size: 1.5vw;
     margin-top: 0px;
 }
@@ -44,8 +44,10 @@
         flex-basis: 10vh;
         padding: 2vw;
     }
-
-    .AboutDisplay-skills h6 {
+    .TechnicalDisplay-skills{
+        margin-bottom: 15vh;
+    }
+    .TechnicalDisplay-skills h6 {
         font-size: 3.5vw;
     }
 
@@ -53,4 +55,19 @@
         width: 15vw;
     }
 
+}
+
+@media only screen and (max-width:1080px) and (min-aspect-ratio: 1/1) {
+    .dev-icons {
+        flex-basis: 10vw;
+        padding: 2vh;
+    }
+
+    .TechnicalDisplay-skills h6 {
+        font-size: 3.5vh;
+    }
+
+    .dev-icons img{
+        width: 15vh;
+    }
 }

@@ -1,12 +1,17 @@
 
 
-.HamburgerMenu{
+/* .HamburgerMenu{
     position: absolute;
     right: 7.5vw;
     top: 5vh;
     display: inline-block;
     visibility: hidden;
-    /* margin: 20px; */
+    
+  } */
+
+  .HamburgerMenu{
+    visibility: hidden;
+    display: none;
   }
   
   .HamburgerMenu-line{
@@ -27,12 +32,8 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    
   }
-/* 
-  .HamburgerMenu.a{
-    font-size: 30px;
-  } */
   
   .HamburgerMenu-line.top.active{
     transform-origin: center;
@@ -64,18 +65,43 @@
   @media only screen and (max-width:1080px) {
     .HamburgerMenu{
       visibility: visible;
+      display: flex;
+      flex-direction: column;
+      height:auto;
+      margin-right: 4vw;
     }
     .HamburgerMenu-menu.active{
       visibility: visible;
+      top: 10vh;
+      right: 8vw;
     }
     
-    .HamburgerMenu a{
-      font-size: 35px;
-    }
     a.active{
       font-weight: bold;
       font-size: 37px;
       font-family:'Great Vibes';
       color:black;
+    }
+    .HamburgerMenu-menu a{
+      font-size: 3vh;
+    }
+
+    .HamburgerMenu-menu{
+      width: 50vw;
+    }
+  }
+
+  @media only screen and (max-width:1080px)and (min-aspect-ratio: 1/1) {
+    .HamburgerMenu-menu.active{
+      visibility: visible;
+      top: 8vw;
+      right: 5.5vw;
+      
+    }
+    .HamburgerMenu-menu a{
+      font-size: 3vw;
+    }
+    .HamburgerMenu-menu{
+      width: 50vh;
     }
   }

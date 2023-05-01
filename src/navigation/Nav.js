@@ -9,10 +9,8 @@ function Nav() {
       
         <nav className="Nav">
             <div className="Nav-site-title">
-                <h1>
-                    <span className="creative">Michael |</span>
-                    <span className="logical">Bocim</span>
-                </h1>
+                <span className="creative">Michael |</span>
+                <span className="logical">Bocim</span>
             </div>
             <div className="Nav-links">
                 <NavLink className="Nav-links-browser" to={"/"}>
@@ -34,10 +32,6 @@ function Nav() {
                     Contact
                 </NavLink>
                 <HamburgerMenu className="Nav-HamburgerMenu"/>
-
-                {/* <NavLink to={"/other"}>
-                Other
-            </NavLink> */}
             </div>
         </nav>
     )
