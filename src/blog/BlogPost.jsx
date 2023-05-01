@@ -38,7 +38,7 @@ function BlogPost({ token, setLoaded }) {
             }))
             setLoaded(() => false)
             setErrors(()=>[])
-            // console.log("success, result is", result);
+            console.log("success, result is", result);
         }
         catch (errorMessages) {
             // console.log("err>>>>>>>>>>>>", errorMessages);
