@@ -28,6 +28,16 @@ function ContactDisplay() {
             >
                 GitHub
             </a>
+
+            <a
+                href="https://docs.google.com/document/d/1HEL8I_uJ3R66ebP2yqUC_ytf8ti7LT1qjSDIV2LePB8/edit?usp=share_link"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Resume
+            </a>
+
+            
             </div>
         </div>
     )
