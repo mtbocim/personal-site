@@ -9,7 +9,7 @@
     flex-wrap: wrap; 
 }
 .Blog-title{
-    background-color:rgb(188, 151, 196);
+    background-color:rgb(46, 22, 51);
     padding: 5px;
     width:fit-content;
     display:flex;
@@ -20,6 +20,7 @@
     align-content:center;
     flex-wrap: wrap;
     box-shadow: 2px 2px 20px 2px black;
+    color:rgb(236, 230, 230);
 }
 
 .Blog-content-container{

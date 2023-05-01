@@ -61,10 +61,10 @@
 
 @media only screen and (max-width:1080px) and (min-aspect-ratio: 1/1) {
     .Nav .logical {
-        font-size: 10vh;
+        font-size: 5vw;
     }
 
     .Nav .creative {
-        font-size: 10vh;
+        font-size: 5vw;
     }
 }

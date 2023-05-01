@@ -2,4 +2,24 @@
     background-image: url('../assets/background.jpg');
     background-size:cover;
     height: 80vh;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* margin-top: 5vh; */
+}
+
+.HomeDisplay-tag{
+    background-color: rgba(121, 103, 103, 0.863);
+    width: 80vw;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 1vh 1vw;
+    margin-top: 5vh;
+}
+
+@media only screen and (max-width:1080px) {
+    .HomeDisplay-tag{
+        font-size: 5vw;
+    }
 }

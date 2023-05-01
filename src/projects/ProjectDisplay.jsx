@@ -13,11 +13,14 @@ function ProjectDisplay() {
                 >
                     Jobly Demo
                     <img 
-                        className="ProjectDisplay-project" 
+                        className="ProjectDisplay-project-image" 
                         src={require("../assets/Jobly-Screenshot.png")}
                         alt='Jobly demo'
                     ></img>
                 </a>
+                <div className='ProjectDisplay-project-description logical'>
+                    <p>A job listing application built with React</p>
+                </div>
             </div>
             <div className='ProjectDisplay-project'>
                 <a 
@@ -29,11 +32,14 @@ function ProjectDisplay() {
 
                     Warbler demo
                     <img 
-                        className="ProjectDisplay-project" 
+                        className="ProjectDisplay-project-image" 
                         src={require("../assets/Warbler-Screenshot.png")}
                         alt='Warbler demo'
                     ></img>
                 </a>
+                <div className='ProjectDisplay-project-description logical'>
+                    <p>A social media clone using Python, Flask and PostgreSQL</p>
+                </div>
             </div>
         </div>
     )
