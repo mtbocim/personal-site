@@ -30,7 +30,7 @@ function ContactDisplay() {
             </a>
 
             <a
-                href="https://docs.google.com/document/d/1HEL8I_uJ3R66ebP2yqUC_ytf8ti7LT1qjSDIV2LePB8/edit?usp=share_link"
+                href="https://docs.google.com/document/d/1jlEMD73pFr0Bc_Tzin0zVS3icRVVrLZTFkEfI59c890/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
             >
